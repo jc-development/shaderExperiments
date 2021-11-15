@@ -9,13 +9,13 @@ void main() {
 
 // normalize(vector) calculates the unit vector in the same direction as the original vector.
 // vector arg is the vector to normalize. 
-  vec3 v = normalize(position) * 1.0; //u_radius;
+  vec3 v = normalize(position) * u_radius;
 
 // mix(x, y, a) linearly interpolate b/t 2 values
 // x start of range to interpolate
 // y end of range to interpolate
 // a specify the value to use to interpolate b/t x and y
-
   vec3 pos = mix(position, v, delta);
+
   gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
 }

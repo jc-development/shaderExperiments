@@ -36,14 +36,10 @@ const material = new THREE.ShaderMaterial({
   wireframe: true,
 });
 
-const material1 = new THREE.MeshBasicMaterial({
-  color: 0xb7ff00,
-  wireframe: true,
-});
-
 const ball = new THREE.Mesh(boxGeometry, material);
-const controls = new OrbitControls(camera, renderer.domElement);
- 
+
+new OrbitControls(camera, renderer.domElement);
+
 scene.add(ball);
 
 onWindowResize();
