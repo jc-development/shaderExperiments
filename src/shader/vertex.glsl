@@ -5,7 +5,7 @@ void main() {
   // vec3 pos = position;
 
 // use sin to position coords b/t 0.0 to 1.0
-  float delta = ((sin(u_time * 1.25) + 1.0) / 2.0); // * 0.5; to amplify the position of the vertex; can be neg float too
+  float delta = ((sin(u_time * 1.25) + 1.0 )/ sin(u_time)) * sin(u_radius); // to amplify the osition of the vertex; can be neg float too
 
 // normalize(vector) calculates the unit vector in the same direction as the original vector.
 // set it to length of 1
