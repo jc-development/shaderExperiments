@@ -20,7 +20,7 @@ document.body.appendChild(renderer.domElement);
 
 const clock = new THREE.Clock();
 
-const boxGeometry = new THREE.BoxGeometry(30, 30, 30, 10, 10, 10);
+const boxGeometry = new THREE.BoxGeometry(20, 20, 20, 16, 16, 16);
 
 const uniforms = {
   u_time: { value: 0.0 },

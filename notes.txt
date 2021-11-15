@@ -1,0 +1,31 @@
+1. Buffers 
+Buffers are arrays of binary data you upload to the GPU
+- usually contains things like positions, normals, texture coordinates, vertex colors
+- buffers are NOT random acess - instead a vertex shader is executed a specified number of times.
+-- each time it's executed, the next value from each specified buffer is pulled out and assigned to an attribute
+
+
+2. Attributes
+Attributes are used to specify how to pull data out of your buffers and provide them to your vertex shader.
+- ex) put positions in a buffer as three 32bit floats per position.
+-- you would tell a particular attribute which buffer to pull the positions out of, what type of data it should pull out (3 component 32 bit floating point numbers), what offset in the buffer the positions start, and how many byes to get from one position to the next.
+
+
+3. Uniforms
+Uniforms are global variables you set before you execute your shader program.
+
+
+4. Textures
+Textures are arrays of data you can randomly access in your shader program. Most common thing to put in a texture is image data but textures are just data and can just as easily contain something other than colors.
+
+
+5. Varyings
+Varyings are a way for a vertex shader to pass data to a fragment shader. 
+- Depending on what is being rendered, points, lines, triangles, the values set on a varying by a vertex shader will be interpolated while executing the fragment shader.
+
+
+WEBGL only cares about 2 things: clip space coords and colors.
+Vertex shader provides clip space coordinates, and a fragment shader provides the color.
+
+Clip Space will always go from -1 to +1 no matter what size canvas is.
+
